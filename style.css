@@ -51,9 +51,9 @@ nav {
 
 .logo p {
   color: var(--primary-color);
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 28px;
   user-select: none;
+  font-family: 'La Belle Aurore', cursive;
 }
 
 .links {
@@ -357,6 +357,10 @@ footer {
   filter: brightness(110%);
 }
 
+.footer-nav .logo p {
+  font-size: 22px;
+}
+
 @keyframes move {
   0% {
     translate: 0 0;
@@ -386,7 +390,7 @@ footer {
 
 @media screen and (min-width: 768px) {
   .logo p {
-    font-size: 20px;
+    font-size: 40px;
   }
 
   h1 {
@@ -552,5 +556,9 @@ footer {
     grid-area: 2 / 1 / 3 / 3;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .footer-nav .logo p {
+    font-size: 24px;
   }
 }
