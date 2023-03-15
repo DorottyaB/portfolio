@@ -62,23 +62,6 @@ nav {
   padding-top: 20px;
 }
 
-nav .logo {
-  width: 30px;
-  height: 30px;
-  border: 1.5px solid var(--light-text-color);
-  background-color: transparent;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-}
-
-.logo p {
-  color: var(--light-text-color);
-  font-size: 21px;
-  user-select: none;
-  font-family: 'La Belle Aurore', cursive;
-}
-
 .links {
   display: flex;
   gap: 15px;
@@ -119,11 +102,11 @@ h1 {
 
 .btn {
   position: relative;
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   text-decoration: none;
   padding: 14px 28px;
-  max-width: 190px;
+  max-width: 200px;
   display: inline-block;
   border-radius: 100px;
   transition: all 0.2s ease-in;
@@ -244,9 +227,21 @@ h2 {
   letter-spacing: 0.02em;
 }
 
-section.skills {
+section.about,
+section.skills,
+section.projects {
   padding-top: 60px;
   padding-bottom: 40px;
+}
+
+section.about .title {
+  margin-bottom: 20px;
+}
+
+section.about p {
+  font-size: 20px;
+  line-height: 26px;
+  text-align: justify;
 }
 
 .skills-list {
@@ -276,11 +271,6 @@ section.skills {
   width: 32px;
   height: auto;
   filter: invert(56%) sepia(14%) saturate(1863%) hue-rotate(197deg) brightness(94%) contrast(98%);
-}
-
-section.projects {
-  padding-top: 60px;
-  padding-bottom: 40px;
 }
 
 .cards-container {
@@ -440,6 +430,7 @@ footer {
 
 .footer-nav .logo p {
   font-size: 22px;
+  font-family: 'La Belle Aurore', cursive;
 }
 
 @keyframes move {
@@ -471,8 +462,16 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  .introduction p {
+    font-size: 18px;
+  }
+
   h2 {
     font-size: 44px;
+  }
+
+  section.about p {
+    text-align: left;
   }
 
   section.divider {
@@ -482,7 +481,7 @@ footer {
   }
 
   .introduction p:last-of-type {
-    max-width: 440px;
+    max-width: 495px;
     margin: 0 auto;
   }
 
@@ -548,10 +547,15 @@ footer {
   h1 {
     -webkit-animation: focus-in-expand-fwd 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     animation: focus-in-expand-fwd 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    font-size: 58px;
+  }
+
+  .links a {
+    transition: all 0.2s;
   }
 
   .links a:hover {
-    filter: brightness(110%);
+    filter: invert(10%) sepia(23%) saturate(2404%) hue-rotate(165deg) brightness(98%) contrast(94%);
   }
 
   main {
@@ -571,9 +575,14 @@ footer {
     font-size: 18px;
   }
 
+  section.about p {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
   .cards-container {
-    grid-template-columns: repeat(2, minmax(318px, 560px));
-    justify-content: space-evenly;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
     row-gap: 60px;
   }
 
@@ -589,12 +598,21 @@ footer {
     text-align: left;
   }
 
+  .card-details h3 {
+    font-size: 22px;
+  }
+
   .card-details ul {
     justify-content: flex-start;
+    font-size: 18px;
   }
 
   .card-button-group {
     justify-content: flex-start;
+  }
+
+  .btn-filled {
+    font-size: 18px;
   }
 
   .more-projects {
@@ -641,5 +659,15 @@ footer {
 
   .footer-nav .logo p {
     font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  main {
+    padding: 0 18%;
+  }
+
+  footer {
+    padding: 80px 18% 35px 18%;
   }
 }
