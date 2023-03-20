@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Lato:wght@400;700;900&family=La+Belle+Aurore&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Dorottya Balogh Front-end Developer</title>
   </head>
   <body>
@@ -271,10 +271,17 @@
       </div>
       <div class="footer-nav">
         <div class="logo">
-          <p>dorottyabalogh</p>
+          Created by
+          <span>dorottyabalogh</span>
         </div>
-        <p class="copyright">&copy; 2023. All Rights Reserved.</p>
+        <p class="copyright">&copy; <span id="year"></span>. All Rights Reserved.</p>
       </div>
     </footer>
+
+    <script>
+      const today = new Date();
+      const year = today.getFullYear();
+      document.getElementById('year').textContent = year;
+    </script>
   </body>
 </html>
