@@ -15,6 +15,15 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background: var(--primary-color);
+}
+
+*:focus-visible {
+  outline-offset: 3px;
+  outline: solid var(--secondary-color) 2px;
+}
+
 a:link,
 a:visited {
   text-decoration: none;
@@ -43,6 +52,88 @@ body {
   position: relative;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* NAVIGATION */
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+
+.nav-icon {
+  margin: 15px 15px 0 auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 90;
+}
+
+.bar {
+  width: 25px;
+  height: 2px;
+  background-color: var(--light-text-color);
+  opacity: 0.8;
+  z-index: 100;
+  transition: all 0.4s;
+}
+
+.nav-icon.close .bar:first-of-type {
+  transform: rotate(45deg);
+}
+.nav-icon.close .bar:nth-of-type(2) {
+  display: none;
+}
+.nav-icon.close .bar:last-of-type {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 100vh;
+    opacity: 1;
+  }
+}
+
+.navigation {
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 30px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  z-index: 10;
+  animation: 0.5s slideDown linear forwards;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  color: var(--light-text-color);
+}
+
+.hidden {
+  display: none;
+}
+
 /* HEADER */
 header {
   padding: 25px 6% 25px 6%;
@@ -56,7 +147,7 @@ header {
   justify-content: center;
 }
 
-nav {
+.social-links {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -501,6 +592,30 @@ footer {
   }
 
   nav {
+    padding: 25px 5%;
+  }
+
+  .nav-icon {
+    display: none;
+  }
+
+  .navigation {
+    position: relative;
+    background-color: transparent;
+    height: max-content;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 40px;
+    font-size: 0.8rem;
+    animation: none;
+  }
+
+  .nav-link:hover {
+    transition: all 0.3s;
+    color: var(--secondary-color);
+  }
+
+  .social-links {
     padding-top: 0;
   }
 
@@ -550,8 +665,8 @@ footer {
   }
 
   h1 {
-    -webkit-animation: focus-in-expand-fwd 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: focus-in-expand-fwd 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -webkit-animation: focus-in-expand-fwd 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: focus-in-expand-fwd 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     margin-top: 10px;
     margin-bottom: 22px;
   }
