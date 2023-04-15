@@ -65,6 +65,7 @@ nav {
 }
 
 .nav-icon {
+  background-color: transparent;
   margin: 15px 15px 0 auto;
   width: 50px;
   height: 50px;
@@ -410,6 +411,7 @@ section.about p:not(:last-of-type) {
 .card-details ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   font-size: 16px;
