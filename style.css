@@ -404,13 +404,14 @@ section.about p:not(:last-of-type) {
   padding: 30px;
   line-height: 1.3rem;
   opacity: 0;
+  user-select: none;
 }
 
-.card-image:hover .project-description {
+.project-description.animate {
   display: flex;
   align-items: center;
   z-index: 10;
-  animation: slideUp 0.45s ease-in-out forwards;
+  animation: slideUp 0.3s ease-in-out forwards;
 }
 
 @keyframes slideUp {
@@ -750,9 +751,12 @@ footer {
     transition: all 1s;
   }
 
-  /* .card:hover .card-image img {
-    transform: scale(1.06);
-  } */
+  .card-image:hover .project-description {
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    animation: slideUp 0.45s ease-in-out forwards;
+  }
 
   .card-details {
     text-align: left;

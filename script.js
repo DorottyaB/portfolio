@@ -1,5 +1,6 @@
 const navIcon = document.querySelector('.nav-icon');
 const navLinks = document.querySelectorAll('.nav-link');
+const cardImages = document.querySelectorAll('.card-image');
 
 function toggleNav() {
   document.querySelector('body').classList.toggle('no-scroll');
@@ -12,6 +13,13 @@ navIcon.addEventListener('click', toggleNav);
 if (window.innerWidth < 1024) {
   navLinks.forEach(link => {
     link.addEventListener('click', toggleNav);
+  });
+
+  cardImages.forEach(image => {
+    image.addEventListener('click', () => {
+      const description = image.children[1];
+      description.classList.toggle('animate');
+    });
   });
 }
 
