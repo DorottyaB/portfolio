@@ -28,8 +28,8 @@
         <li><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <header>
-      <section class="hero">
+    <header class="hero">
+      <div class="hero--left-side">
         <div class="introduction">
           <p>Hi, my name is Dorottya and I'm a</p>
           <h1>FRONT-END DEVELOPER</h1>
@@ -55,7 +55,10 @@
             /></a>
           </div>
         </div>
-      </section>
+      </div>
+      <div class="hero--right-side">
+        <img src="./assets/javascript-frameworks-animate.svg" width="300" alt="" />
+      </div>
     </header>
 
     <main>
@@ -187,8 +190,8 @@
               <img src="./assets/audiophile-desktop-preview.png" alt="Audiophile website preview" />
               <p class="project-description">
                 A fully responsive e-commerce website where the user can add/remove products from
-                the cart and edit product quantities in the cart. The data is stored in Firebase,
-                the responsive images on Cloudinary.
+                the cart and edit product quantities in the cart. It features a fully-fledged
+                checkout flow. The data is stored in Firebase, the responsive images on Cloudinary.
               </p>
             </div>
             <div class="card-details">
@@ -332,6 +335,20 @@
         <p class="copyright">&copy; <span id="year"></span>. All Rights Reserved.</p>
       </div>
     </footer>
+
+    <button class="back-to-top hide" aria-label="Back to top">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="48"
+        height="48"
+        fill="#fbfbfb"
+        viewBox="0 0 256 256"
+      >
+        <path
+          d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,125.66a8,8,0,0,1-11.32,0L128,115.31,93.66,149.66a8,8,0,0,1-11.32-11.32l40-40a8,8,0,0,1,11.32,0l40,40A8,8,0,0,1,173.66,149.66Z"
+        ></path>
+      </svg>
+    </button>
 
     <script src="./script.js"></script>
   </body>
