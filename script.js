@@ -1,6 +1,7 @@
 const navIcon = document.querySelector('.nav-icon');
 const navLinks = document.querySelectorAll('.nav-link');
-const cardImages = document.querySelectorAll('.card-image');
+const cards = document.querySelectorAll('.card');
+const titles = document.querySelectorAll('.title h2');
 const toTopBtn = document.querySelector('.back-to-top');
 
 function toggleNav() {
@@ -15,48 +16,42 @@ if (window.innerWidth < 1024) {
   navLinks.forEach(link => {
     link.addEventListener('click', toggleNav);
   });
-
-  cardImages.forEach(image => {
-    image.addEventListener('click', () => {
-      const description = image.children[1];
-      description.classList.toggle('animate');
-    });
-  });
-}
-
-if (window.innerWidth >= 1024) {
-  document.querySelector('.navigation').classList.remove('hidden');
 }
 
 const today = new Date();
 const year = today.getFullYear();
 document.getElementById('year').textContent = year;
 
-function fadeUpObserverCallback(elsToWatch) {
+function slideInObserverCallback(elsToWatch) {
   elsToWatch.forEach(el => {
     if (el.isIntersecting) {
-      el.target.classList.add('scale-up');
-      fadeUpObserver.unobserve(el.target);
-      el.target.addEventListener(
-        'transitionend',
-        () => {
-          el.target.classList.remove('scale-up');
-        },
-        { once: true }
-      );
+      if (el.target.classList.contains('from-right')) {
+        el.target.classList.add('slide-in-right');
+      } else if (el.target.classList.contains('from-left')) {
+        el.target.classList.add('slide-in-left');
+      } else {
+        el.target.classList.add('bounce-top');
+      }
+      slideInObserver.unobserve(el.target);
     }
   });
 }
 
-const fadeUpObserverOptions = {
-  threshold: 0.6,
+const slideInObserverOptions = {
+  threshold: 0.2,
 };
 
-const fadeUpObserver = new IntersectionObserver(fadeUpObserverCallback, fadeUpObserverOptions);
+const slideInObserver = new IntersectionObserver(slideInObserverCallback, slideInObserverOptions);
 
-if (window.innerWidth < 1024) {
-  cardImages.forEach(item => {
-    fadeUpObserver.observe(item);
+titles.forEach(title => {
+  slideInObserver.observe(title);
+});
+
+if (window.innerWidth >= 1024) {
+  document.querySelector('.navigation').classList.remove('hidden');
+
+  cards.forEach(item => {
+    slideInObserver.observe(item);
   });
 }
 

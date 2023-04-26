@@ -21,43 +21,44 @@
         <div class="bar"></div>
         <div class="bar"></div>
       </button>
-      <ul class="hidden navigation">
-        <li><a class="nav-link" href="#skills">Skills</a></li>
-        <li><a class="nav-link" href="#projects">Projects</a></li>
-        <li><a class="nav-link" href="#about">About</a></li>
-        <li><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <header class="hero">
-      <div class="hero--left-side">
-        <div class="introduction">
-          <p>Hi, my name is Dorottya and I'm a</p>
-          <h1>FRONT-END DEVELOPER</h1>
-          <p>
-            I enjoy turning a beautiful design into a user-friendly, scalable and accessible website
-            while solving problems along the way.
-          </p>
-        </div>
-        <div>
-          <a href="#projects" class="btn btn-main"><span>View Projects</span></a>
-        </div>
+      <div class="hidden navigation">
+        <ul>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
         <div class="social-links">
-          <div class="links">
-            <a href="https://www.linkedin.com/" title="LinkedIn" aria-label="LinkedIn"
-              ><img
-                width="36"
-                height="36"
-                src="./assets/linkedin-logo-fill.svg"
-                alt="LinkedIn logo"
-            /></a>
-            <a href="https://github.com/DorottyaB" title="GitHub" aria-label="GitHub"
-              ><img width="36" height="36" src="./assets/icons8-github.svg" alt="GitHub logo"
-            /></a>
-          </div>
+          <a href="https://www.linkedin.com/" title="LinkedIn" aria-label="LinkedIn"
+            ><img
+              width="36"
+              height="36"
+              src="./assets/linkedin-logo-fill.svg"
+              alt="LinkedIn logo"
+              class="social-icon"
+          /></a>
+          <a href="https://github.com/DorottyaB" title="GitHub" aria-label="GitHub"
+            ><img
+              width="36"
+              height="36"
+              src="./assets/icons8-github.svg"
+              alt="GitHub logo"
+              class="social-icon"
+          /></a>
         </div>
       </div>
-      <div class="hero--right-side">
-        <img src="./assets/javascript-frameworks-animate.svg" width="300" alt="" />
+    </nav>
+    <header class="hero">
+      <div class="introduction">
+        <p>Hi, my name is Dorottya and I'm a</p>
+        <h1>FRONT-END DEVELOPER</h1>
+        <p>
+          I enjoy turning a beautiful design into a user-friendly, scalable and accessible website
+          while solving problems along the way.
+        </p>
+      </div>
+      <div>
+        <a href="#projects" class="btn btn-main"><span>View Projects</span></a>
       </div>
     </header>
 
@@ -87,204 +88,216 @@
           <a href="#contact" class="btn btn-inverted">Contact me</a>
         </div>
         <div class="cards-container" id="cards-container">
-          <div class="card">
+          <div class="card from-right">
             <div class="card-image">
               <img src="./assets/photosnap-desktop-preview.png" alt="Photosnap website preview" />
+            </div>
+            <div class="card-text">
+              <div class="card-details">
+                <h3>PHOTOSNAP marketing site</h3>
+                <ul>
+                  <li>React JS</li>
+                  <li>React Router</li>
+                  <li>CSS</li>
+                </ul>
+              </div>
               <p class="project-description">
                 A fully responsive website for a photo-sharing service built with React and React
                 Router for the navigation.
               </p>
-            </div>
-            <div class="card-details">
-              <h3>PHOTOSNAP marketing site</h3>
-              <ul>
-                <li>React JS</li>
-                <li>React Router</li>
-                <li>CSS</li>
-              </ul>
-            </div>
-            <div class="card-button-group">
-              <a
-                href="https://photosnap-dorottyab.netlify.app/"
-                target="_blank"
-                class="btn-filled btn-demo"
-              >
-                LIVE DEMO
-              </a>
-              <a href="https://github.com/DorottyaB/photosnap" target="_blank" class="btn-filled">
-                VIEW CODE
-              </a>
+              <div class="card-button-group">
+                <a
+                  href="https://photosnap-dorottyab.netlify.app/"
+                  target="_blank"
+                  class="btn-filled btn-demo"
+                >
+                  LIVE DEMO
+                </a>
+                <a href="https://github.com/DorottyaB/photosnap" target="_blank" class="btn-filled">
+                  VIEW CODE
+                </a>
+              </div>
             </div>
           </div>
-          <div class="card">
+          <div class="card from-left">
+            <div class="card-text">
+              <div class="card-details">
+                <h3>Shortly URL shortening API landing page</h3>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Javascript</li>
+                </ul>
+              </div>
+              <p class="project-description">
+                Shorten any valid URL and see a list of the shortened links, even after refreshing
+                the browser. Copy the shortened link to the clipboard in a single click.
+              </p>
+              <div class="card-button-group">
+                <a
+                  href="https://dorottyab.github.io/url-shortening-api-landing-page/"
+                  target="_blank"
+                  class="btn-filled btn-demo"
+                  >LIVE DEMO</a
+                >
+                <a
+                  href="https://github.com/DorottyaB/url-shortening-api-landing-page"
+                  target="_blank"
+                  class="btn-filled"
+                >
+                  VIEW CODE
+                </a>
+              </div>
+            </div>
             <div class="card-image">
               <img
                 src="./assets/shortly-desktop-preview.png"
                 alt="URL shortening website preview"
               />
-              <p class="project-description">
-                Shorten any valid URL and see a list of the shortened links, even after refreshing
-                the browser. Copy the shortened link to the clipboard in a single click.
-              </p>
-            </div>
-            <div class="card-details">
-              <h3>Shortly URL shortening API landing page</h3>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-              </ul>
-            </div>
-            <div class="card-button-group">
-              <a
-                href="https://dorottyab.github.io/url-shortening-api-landing-page/"
-                target="_blank"
-                class="btn-filled btn-demo"
-                >LIVE DEMO</a
-              >
-              <a
-                href="https://github.com/DorottyaB/url-shortening-api-landing-page"
-                target="_blank"
-                class="btn-filled"
-              >
-                VIEW CODE
-              </a>
             </div>
           </div>
-          <div class="card">
+          <div class="card from-right">
             <div class="card-image">
               <img
                 src="./assets/job-listings-desktop-preview.png"
                 alt="Job listings website preview"
               />
+            </div>
+            <div class="card-text">
+              <div class="card-details">
+                <h3>Job listings landing page</h3>
+                <ul>
+                  <li>React JS</li>
+                  <li>CSS</li>
+                </ul>
+              </div>
               <p class="project-description">
                 Filter job listings based on the categories selected. Built with React and a
                 mobile-first workflow.
               </p>
-            </div>
-            <div class="card-details">
-              <h3>Job listings landing page</h3>
-              <ul>
-                <li>React JS</li>
-                <li>CSS</li>
-              </ul>
-            </div>
-            <div class="card-button-group">
-              <a
-                href="https://static-job-listings-dorottyab.vercel.app/"
-                target="_blank"
-                class="btn-filled btn-demo"
-                >LIVE DEMO</a
-              >
-              <a
-                href="https://github.com/DorottyaB/static-job-listings"
-                target="_blank"
-                class="btn-filled"
-              >
-                VIEW CODE
-              </a>
+              <div class="card-button-group">
+                <a
+                  href="https://static-job-listings-dorottyab.vercel.app/"
+                  target="_blank"
+                  class="btn-filled btn-demo"
+                  >LIVE DEMO</a
+                >
+                <a
+                  href="https://github.com/DorottyaB/static-job-listings"
+                  target="_blank"
+                  class="btn-filled"
+                >
+                  VIEW CODE
+                </a>
+              </div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-image">
-              <img src="./assets/audiophile-desktop-preview.png" alt="Audiophile website preview" />
+          <div class="card from-left">
+            <div class="card-text">
+              <div class="card-details">
+                <h3>Audiophile e-commerce website</h3>
+                <ul>
+                  <li>React JS</li>
+                  <li>Redux Toolkit</li>
+                  <li>React Router</li>
+                  <li>Firebase</li>
+                  <li>Tailwind CSS</li>
+                </ul>
+              </div>
               <p class="project-description">
                 A fully responsive e-commerce website where the user can add/remove products from
                 the cart and edit product quantities in the cart. It features a fully-fledged
                 checkout flow. The data is stored in Firebase, the responsive images on Cloudinary.
               </p>
+              <div class="card-button-group">
+                <a
+                  href="https://audiophile-dorottyab.netlify.app/"
+                  target="_blank"
+                  class="btn-filled btn-demo"
+                  >LIVE DEMO</a
+                >
+                <a
+                  href="https://github.com/DorottyaB/audiophile-ecommerce"
+                  target="_blank"
+                  class="btn-filled"
+                >
+                  VIEW CODE
+                </a>
+              </div>
             </div>
-            <div class="card-details">
-              <h3>Audiophile e-commerce website</h3>
-              <ul>
-                <li>React JS</li>
-                <li>Redux Toolkit</li>
-                <li>React Router</li>
-                <li>Firebase</li>
-                <li>Tailwind CSS</li>
-              </ul>
-            </div>
-            <div class="card-button-group">
-              <a
-                href="https://audiophile-dorottyab.netlify.app/"
-                target="_blank"
-                class="btn-filled btn-demo"
-                >LIVE DEMO</a
-              >
-              <a
-                href="https://github.com/DorottyaB/audiophile-ecommerce"
-                target="_blank"
-                class="btn-filled"
-              >
-                VIEW CODE
-              </a>
+            <div class="card-image">
+              <img src="./assets/audiophile-desktop-preview.png" alt="Audiophile website preview" />
             </div>
           </div>
-          <div class="card">
+          <div class="card from-right">
             <div class="card-image">
               <img src="./assets/library-dark-desktop-preview.png" alt="Library website preview" />
+            </div>
+            <div class="card-text">
+              <div class="card-details">
+                <h3>Library book collection manager</h3>
+                <ul>
+                  <li>React JS</li>
+                  <li>CSS</li>
+                </ul>
+              </div>
               <p class="project-description">
                 A book collection manager where the user can add and remove books, mark them as
                 read, add to favorites, sort the list, search and filter the books by genre. There
                 is a light and a dark theme.
               </p>
-            </div>
-            <div class="card-details">
-              <h3>Library book collection manager</h3>
-              <ul>
-                <li>React JS</li>
-                <li>CSS</li>
-              </ul>
-            </div>
-            <div class="card-button-group">
-              <a
-                href="https://library-react-dorottyab.vercel.app/"
-                target="_blank"
-                class="btn-filled btn-demo"
-                >LIVE DEMO</a
-              >
-              <a
-                href="https://github.com/DorottyaB/library-react"
-                target="_blank"
-                class="btn-filled"
-              >
-                VIEW CODE
-              </a>
+              <div class="card-button-group">
+                <a
+                  href="https://library-react-dorottyab.vercel.app/"
+                  target="_blank"
+                  class="btn-filled btn-demo"
+                  >LIVE DEMO</a
+                >
+                <a
+                  href="https://github.com/DorottyaB/library-react"
+                  target="_blank"
+                  class="btn-filled"
+                >
+                  VIEW CODE
+                </a>
+              </div>
             </div>
           </div>
-          <div class="card">
+          <div class="card from-left">
+            <div class="card-text">
+              <div class="card-details">
+                <h3>Coffeeroasters Subscription site</h3>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Javascript</li>
+                </ul>
+              </div>
+              <p class="project-description">
+                A responsive, multi-page website where the user can make selections to create a
+                coffee subscription and see an order summary modal of their choices.
+              </p>
+              <div class="card-button-group">
+                <a
+                  href="https://dorottyab.github.io/coffeeroasters-site/"
+                  target="_blank"
+                  class="btn-filled btn-demo"
+                  >LIVE DEMO</a
+                >
+                <a
+                  href="https://github.com/DorottyaB/coffeeroasters-site"
+                  target="_blank"
+                  class="btn-filled"
+                >
+                  VIEW CODE
+                </a>
+              </div>
+            </div>
             <div class="card-image">
               <img
                 src="./assets/coffeeroasters-desktop-preview.png"
                 alt="Coffeeroasters website preview"
               />
-              <p class="project-description">
-                A responsive, multi-page website where the user can make selections to create a
-                coffee subscription and see an order summary modal of their choices.
-              </p>
-            </div>
-            <div class="card-details">
-              <h3>Coffeeroasters Subscription site</h3>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-              </ul>
-            </div>
-            <div class="card-button-group">
-              <a
-                href="https://dorottyab.github.io/coffeeroasters-site/"
-                target="_blank"
-                class="btn-filled btn-demo"
-                >LIVE DEMO</a
-              >
-              <a
-                href="https://github.com/DorottyaB/coffeeroasters-site"
-                target="_blank"
-                class="btn-filled"
-              >
-                VIEW CODE
-              </a>
             </div>
           </div>
         </div>
