@@ -1,6 +1,7 @@
 :root {
   --primary-color: #558db4;
   --secondary-color: #95b8d1;
+  --tertiary-color: #b597f6;
   --light-text-color: #fbfbfb;
   --dark-text-color: #2f2e41;
   --primary-bg-color: #1e202a;
@@ -152,8 +153,7 @@ nav {
 
 /* HEADER */
 header {
-  background: linear-gradient(127deg, var(--secondary-bg-color) 60%, var(--primary-bg-color) 60%);
-  padding: 25px 6% 25px 6%;
+  padding: 100px 6% 25px 6%;
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
@@ -162,14 +162,38 @@ header {
   text-align: center;
 }
 
+.avatar-container svg {
+  width: 200px;
+  height: 200px;
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
 h1 {
-  background: linear-gradient(
-    90deg,
-    #558db4 22.46%,
-    #71a0c1 37.21%,
-    #8eb3cd 53.95%,
-    #aac6da 70.15%
-  );
+  background: linear-gradient(90deg, #b597f6 0%, #96c6ea 60%);
   color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -180,6 +204,8 @@ h1 {
   letter-spacing: 2px;
   margin-top: 6px;
   margin-bottom: 16px;
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
 }
 
 .btn {
@@ -204,7 +230,7 @@ h1 {
   text-align: center;
   transition: all 0.5s;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 5px 0px;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.15);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.05);
   min-width: 171.55px;
 }
 
@@ -588,7 +614,7 @@ section.about p:not(:last-of-type) {
   width: 0;
   left: 0;
   bottom: -7px;
-  background: var(--primary-color);
+  background: var(--tertiary-color);
   height: 2px;
   transition: 0.3s ease-out;
 }
@@ -598,7 +624,7 @@ section.about p:not(:last-of-type) {
   content: 'VIEW CODE';
   width: 0%;
   inset: 0;
-  color: var(--primary-color);
+  color: var(--tertiary-color);
   overflow: hidden;
   transition: 0.3s ease-out;
 }
@@ -708,25 +734,6 @@ footer {
   font-size: 13px;
 }
 
-/* ANIMATION FOR MOBILE */
-@keyframes scale-up {
-  0% {
-    scale: 1;
-  }
-  50% {
-    scale: 1.02;
-  }
-  100% {
-    scale: 1;
-  }
-}
-
-.scale-up {
-  animation-name: scale-up;
-  animation-duration: 0.8s;
-  animation-iteration-count: 2;
-}
-
 /* Back to top button animation */
 @keyframes fadeIn {
   from {
@@ -822,7 +829,7 @@ footer {
 
   .nav-link:hover {
     transition: all 0.3s;
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
   }
 
   .social-links {
@@ -841,12 +848,21 @@ footer {
   header {
     padding: 80px 13% 40px 13%;
     grid-template-columns: 2fr 1fr;
-    justify-items: end;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    column-gap: 30px;
+    row-gap: 45px;
     text-align: left;
-    background: linear-gradient(162deg, var(--secondary-bg-color) 60%, var(--primary-bg-color) 60%);
+  }
+
+  .avatar-container {
+    grid-area: 1 / 2 / 3 / 3;
+    justify-self: center;
+  }
+
+  .avatar-container svg {
+    width: auto;
+    height: auto;
   }
 
   h1 {
@@ -980,7 +996,7 @@ footer {
   }
 
   .more-projects a:hover {
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
   }
 
   footer {
@@ -1021,12 +1037,13 @@ footer {
     margin: 0 auto;
   }
 
-  header {
-    justify-items: center;
-  }
-
   h1 {
     font-size: 3.15rem;
+  }
+
+  .avatar-container svg {
+    width: 300px;
+    height: 300px;
   }
 }
 
