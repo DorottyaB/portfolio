@@ -38,7 +38,7 @@ function slideInObserverCallback(elsToWatch) {
 }
 
 const slideInObserverOptions = {
-  threshold: 0.2,
+  threshold: 0.3,
 };
 
 const slideInObserver = new IntersectionObserver(slideInObserverCallback, slideInObserverOptions);

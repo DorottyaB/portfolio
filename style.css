@@ -64,6 +64,15 @@ nav {
   top: 0;
   right: 0;
   width: 100%;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+}
+
+.logo-container {
+  position: absolute;
+  top: 40%;
+  left: 27.5px;
 }
 
 .nav-icon {
@@ -530,15 +539,7 @@ section.about p:not(:last-of-type) {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
-  gap: 50px;
-}
-
-.card.from-left .card-image {
-  order: 1;
-}
-
-.card.from-left .card-text {
-  order: 2;
+  gap: 16px;
 }
 
 .card-image {
@@ -560,7 +561,6 @@ section.about p:not(:last-of-type) {
   justify-content: center;
   gap: 30px;
   height: max-content;
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -804,6 +804,11 @@ footer {
     padding: 25px 5%;
   }
 
+  .logo-container {
+    top: 25%;
+    left: 5%;
+  }
+
   .nav-icon {
     display: none;
   }
@@ -968,11 +973,19 @@ footer {
   .card {
     grid-template-columns: repeat(2, auto);
     opacity: 0;
+    gap: 50px;
   }
 
-  .card.from-left .card-image,
+  .card.from-left .card-image {
+    order: 2;
+  }
+
   .card.from-left .card-text {
-    order: initial;
+    order: 1;
+  }
+
+  .card-text {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
   }
 
   .project-description {
