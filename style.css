@@ -3,9 +3,8 @@
   --secondary-color: #95b8d1;
   --tertiary-color: #b597f6;
   --light-text-color: #fbfbfb;
-  --dark-text-color: #2f2e41;
-  --primary-bg-color: #1e202a;
-  --secondary-bg-color: #292b32;
+  --primary-bg-color: #1c1d23;
+  --secondary-bg-color: #24262c;
 }
 
 *,
@@ -41,7 +40,6 @@ ul {
 }
 
 html {
-  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -64,9 +62,6 @@ nav {
   top: 0;
   right: 0;
   width: 100%;
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between; */
 }
 
 .logo-container {
@@ -202,7 +197,7 @@ header {
 }
 
 h1 {
-  background: linear-gradient(90deg, #b597f6 0%, #96c6ea 60%);
+  background: linear-gradient(90deg, #9975e6 0%, #96c6ea 60%);
   color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -539,6 +534,7 @@ section.about p:not(:last-of-type) {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
+  justify-items: center;
   gap: 16px;
 }
 
@@ -801,12 +797,12 @@ footer {
   }
 
   nav {
-    padding: 25px 5%;
+    padding: 30px 13%;
   }
 
   .logo-container {
-    top: 25%;
-    left: 5%;
+    top: 27%;
+    left: 13%;
   }
 
   .nav-icon {
@@ -818,7 +814,8 @@ footer {
     background-color: transparent;
     height: max-content;
     flex-direction: row;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
+    justify-content: space-between;
     align-items: center;
     gap: 40px;
     font-size: 0.8rem;
@@ -1044,10 +1041,22 @@ footer {
 }
 
 @media screen and (min-width: 1400px) {
+  nav,
+  footer {
+    padding-left: 18%;
+    padding-right: 18%;
+  }
+
+  .logo-container {
+    left: 18%;
+  }
+
   header,
   main {
     max-width: 1900px;
     margin: 0 auto;
+    padding-left: 18%;
+    padding-right: 18%;
   }
 
   h1 {
