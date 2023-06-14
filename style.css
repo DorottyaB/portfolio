@@ -814,7 +814,6 @@ footer {
     background-color: transparent;
     height: max-content;
     flex-direction: row;
-    /* justify-content: flex-end; */
     justify-content: space-between;
     align-items: center;
     gap: 40px;
@@ -852,7 +851,7 @@ footer {
     grid-template-columns: 2fr 1fr;
     align-items: center;
     justify-content: center;
-    column-gap: 30px;
+    column-gap: 55px;
     row-gap: 45px;
     text-align: left;
   }
@@ -874,7 +873,6 @@ footer {
   }
 
   .introduction p:last-of-type {
-    max-width: 468px;
     margin: 0;
   }
 
